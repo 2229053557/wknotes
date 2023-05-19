@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+		<script src="js/jQuery3.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<!-- 1、基本样式: .nav 与 “nav-tabs”、“nav-pills”组合制作导航
+2、分类:
+ 1)、标签型 (nav-tabs)导航
+ 2)、胶囊形(nav-pills)导航
+ 3)、堆栈(nav-stacked)导航
+ 4)、⾃适应(nav-justified)导航
+  class .nav-justified，让标签式或胶囊式导航菜单与父元素等宽
+ 5)、⾯包屑式(breadcrumb)导航 ，单独使⽤样式，不与nav⼀起使⽤,直接加⼊到ol、ul中即可，⼀般⽤于导航，主要是起的作⽤是告诉
+⽤户现在所处⻚⾯的位置（当前位置）
+3、状态:
+ 1)、选中状态 active 样式class='active'
+ 2)、禁⽤状态: disable
+4、⼆级菜单 -->
+		<p>标签式的导航菜单</p>
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#">Home</a></li>
+		  <li><a href="#">SVN</a></li>
+		  <li><a href="#">iOS</a></li>
+		  <li><a href="#">VB.Net</a></li>
+		  <li><a href="#">Java</a></li>
+		  <li><a href="#">PHP</a></li>
+		</ul>
+		<p>基本的胶囊式导航菜单</p>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">SVN</a></li>
+			<li><a href="#">iOS</a></li>
+			<li><a href="#">VB.Net</a></li>
+			<li><a href="#">Java</a></li>
+			<li><a href="#">PHP</a></li>
+		</ul>
+		<hr>
+
+
+		<!-- 分⻚随处可⻅，分为⻚码导航和翻⻚导航
+⻚码导航：ul标签上加pagination [pagination-lg | pagination-sm]
+翻⻚导航：ul标签上加pager -->
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+		<hr>
+		<ul class="pager">
+		    <li><a href="#">Previous</a></li>
+		    <li><a href="#">Next</a></li>
+		</ul>
+		<hr>
+		<p>带有下拉菜单的标签</p>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">Home</a></li>
+	<li><a href="#">SVN</a></li>
+	<li><a href="#">iOS</a></li>
+	<li><a href="#">VB.Net</a></li>
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Java <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Swing</a></li>
+			<li><a href="#">jMeter</a></li>
+			<li><a href="#">EJB</a></li>
+			<li class="divider"></li>
+			<li><a href="#">分离的链接</a></li>
+		</ul>
+	</li>
+	<li><a href="#">PHP</a></li>
+</ul>
+
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+		<script src="js/jQuery3.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+  <!-- 
+ .text-muted：提示，使⽤浅灰⾊（#999）
+ .text-primary：主要，使⽤蓝⾊（#428bca）
+ .text-success：成功，使⽤浅绿⾊(#3c763d)
+ .text-info：通知信息，使⽤浅蓝⾊（#31708f）
+ .text-warning：警告，使⽤⻩⾊（#8a6d3b）
+ .text-danger：危险，使⽤褐⾊（#a94442） 
+ -->
+ <!-- 文本
+以下不同的类展示了不同的文本颜色。如果文本是个链接鼠标移动到文本上会变暗：
+ -->
+ <h2>文本</h2>
+	<p class="text-muted">该段落使用了样式 "text-muted"。</p>   
+    <hr>
+ <h2>文本</h2>
+	<p class="text-primary">该段落使用了样式 "text-primary"。</p>    
+    <hr>
+    <h2>文本</h2>
+      <p class="text-success">该段落使用了样式 "text-success"。</p>      
+      <hr>
+      <h2>文本</h2>
+      <p class="text-info">该段落使用了样式 "text-info"。</p>  
+      <hr>
+      <h2>文本</h2>
+	<p class="text-warning">该段落使用了样式 "text-warning"。</p>   
+    <hr>
+    <h2>文本</h2>
+	<p class="text-danger">该段落使用了样式 "text-danger"。</p>    
+    <!-- 
+.bg-primary	表格单元格使用了 "bg-primary" 类	
+.bg-success	表格单元格使用了 "bg-success" 类	
+.bg-info	表格单元格使用了 "bg-info" 类	
+.bg-warning	表格单元格使用了 "bg-warning" 类	
+.bg-danger	表格单元格使用了 "bg-danger" 类	
+     -->
+<!-- 背景
+以下不同的类展示了不同的背景颜色。 如果文本是个链接鼠标移动到文本上会变暗：
+
+ -->
+ <h2>背景</h2>
+	<p class="bg-primary">该段落使用了类 "bg-primary"。</p>
+    <hr>
+    <h2>背景</h2>
+	<p class="bg-success">该段落使用了类 "bg-success"。</p>
+    <hr>
+    <h2>背景</h2>
+	<p class="bg-info">该段落使用了类 "bg-info"。</p>
+    <hr>
+    <h2>背景</h2>
+	<p class="bg-warning">该段落使用了类 "bg-warning"。</p>
+    <hr>
+    <h2>背景</h2>
+	<p class="bg-danger">该段落使用了类 "bg-danger"。</p>
+
+    <!-- 
+. pull-left	元素浮动到左边	
+.pull-right	元素浮动到右边	
+.center-block	设置元素为 display:block 并居中显示	
+.clearfix	清除浮动	
+.show	强制元素显示	
+.hidden	强制元素隐藏	
+.sr-only	除了屏幕阅读器外，其他设备上隐藏元素	
+.sr-only-focusable	与 .sr-only 类结合使用，在元素获取焦点时显示(如：键盘操作的用户)	
+.text-hide	将页面元素所包含的文本内容替换为背景图	
+.close	显示关闭按钮	
+.caret	显示下拉式功能	
+     -->
+     <div class="container">
+        <h2>实例</h2>
+        <div class="pull-left">元素浮动到左侧</div>
+        <div class="pull-right">元素浮动到右侧</div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="center-block" style="width:150px;background-color:#ccc;">该 div 显示在中间</div>
+    </div> 
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-sm-3" style="background-color:lavender;">
+            列 1<br>
+            重置窗口大小，查看效果。也尝试删除有 clearfix  的 div 查看效果。
+          </div>
+          <div class="col-xs-6 col-sm-3" style="background-color:lavenderblush;">列 2</div>
+          <!-- Add clearfix for only the required viewport -->
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-6 col-sm-3" style="background-color:lightcyan;">列 3</div>
+          <div class="col-xs-6 col-sm-3" style="background-color:lightgray;">列 4</div>
+        </div>
+      </div>
+      <hr>
+      <div class="container">
+        <h2>实例</h2>
+        <p> .show 类强制一个元素显示:</p>
+        <p class="show">该段落强制显示</p>
+        <p> .hidden 类强制一个元素隐藏 :</p>
+        <p class="hidden">该段落强制隐藏</p>      
+    </div>
+    <hr>
+    <div class="container">
+        <h2>实例</h2>
+        <p> .sr-only 类除了屏幕阅读器外，其他设备上都隐藏元素:</p>
+        <a class="sr-only" href="#">跳转到主要内容</a>
+        <p>与 .sr-only 类结合使用，在元素获取焦点时显示(如：键盘操作的用户):</p>
+        <a class="sr-only sr-only-focusable" href="#">跳转到主要内容</a>
+    </div>
+    <hr>
+    <h2>实例</h2>
+	<p> .text-hide 类将页面元素所包含的文本内容替换为背景图:</p>
+	<div class="text-hide">在 div 元素中插入一些文本。隐藏文本</div>
+    <hr>
+    <div class="container">
+        <h2>实例</h2>
+        <p> .close 类可以显示一个关闭按钮。</p>
+        <button type="button" class="close"><span aria-hidden="true">x</span><span class="sr-only">关闭</span></button>
+    </div>
+    <hr>
+    <p> .caret 类显示了一个下拉的功能: <span class="caret"></span></p>
+	<p> .caret 类在按钮中使用：</p>
+	<div class="btn-group">
+		<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></button>
+		<ul class="dropdown-menu" role="menu">
+			<li><a href="#">一个链接</a></li>
+			<li><a href="#">另一个链接 link</a></li>
+			<li><a href="#">其他功能</a></li>
+		</ul>
+	</div>        
+</div>
+
+	</body>
+</html>

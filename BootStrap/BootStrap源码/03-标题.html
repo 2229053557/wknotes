@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+	</head>
+	<body>
+		<!-- 标题 -->
+		<!-- Bootstrap和普通的HTML⻚⾯⼀样，定义标题都是使⽤标签 -->
+		<!-- . ,只不过Bootstrap覆盖了其默认的样式，使⽤其在所有浏览器下显示的效果⼀样。<h1>h1. Bootstrap heading<small>副标题</small></h1>
+<div class="h1">Bootstrap标题1<span class="small">副标题</span></div>为了让⾮
+标题元素和标题使⽤相同的样式，还特意定义了.h1~.h6六个类名。同时后⾯可以紧跟着⼀⾏⼩的副标
+题或使⽤.small -->
+		<h1>我是标题-----<small>我是副标题</small></h1>
+		<div class="h1">我是bootstrap标题<div class="small">我是bootstrap的副标题</div></div>
+
+
+	
+
+		<!-- 段落 -->
+		<!-- 段落是排版中另⼀个重要元素之⼀。通过.lead 来突出强调内容(其作⽤就是增⼤⽂本字号，加粗⽂
+本，⽽且对⾏⾼和margin也做相应的处理 -->
+		<p class="lead"><small>以后的</small><b>你</b>会<i>感谢</i>现在<em>努力</em>的<strong>你</strong></p>
+
+
+
+		<!-- 强调 -->
+		<!-- 定义了⼀套类名，这⾥称其为强调类名，这些强调类都是通过颜⾊来表示强调，具本说明如下：
+ .text-muted：提示，使⽤浅灰⾊（#999）
+ .text-primary：主要，使⽤蓝⾊（#428bca）
+ .text-success：成功，使⽤浅绿⾊(#3c763d)
+ .text-info：通知信息，使⽤浅蓝⾊（#31708f）
+ .text-warning：警告，使⽤⻩⾊（#8a6d3b）
+ .text-danger：危险，使⽤褐⾊（#a94442） -->
+		<div class="text-muted">提示效果</div>
+		<div class="text-primary">主要效果</div>
+		<div class="text-success">成功效果</div>
+		<div class="text-info">信息效果</div>
+		<div class="text-warning">警告效果</div>
+		<div class="text-danger">危险效果</div>
+<hr>
+
+
+
+		<!-- 对齐 (p标签在外面盒子里的位置)-->
+		<!-- 在CSS中常常使⽤text-align来实现⽂本的对⻬⻛格的设置。
+ 其中主要有四种⻛格：
+ 左对⻬，取值left ;
+ 居中对⻬，取值center;
+ 右对⻬，取值right ;
+ 两端对⻬，取值justify。
+为了简化操作，⽅便使⽤，Bootstrap通过定义四个类名来控制⽂本的对⻬⻛格：.text-left：左对⻬ .text-center：居中
+对⻬ .text-right：右对⻬ .text-justify：两端对⻬。 -->
+		<p class="text-left">我居左</p>
+		<p class="text-center">我居中</p>
+		<p class="text-right">我居右</p>
+		<p class="text-justify">网格系统的实现原理非常简单，仅仅是通过定义容器大小，平分12份(也有平分成24份或32份，但12份是最常见的)，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统。Bootstrap框架中的网格系统就是将容器平分成12份</p>
+
+
+
+		<!-- 无序列表 -->
+		<!-- 0.1.5.1. 去点列表
+ class="list-unstyled" -->
+		<ul class="list-unstyled">
+		    <li>无序项目列表一</li>
+			<li>无序项目列表二</li>
+		</ul>
+
+		<!-- 0.1.5.2. 内联列表
+class="list-inline"，把垂直列表换成⽔平列表，⽽且去掉项⽬符号（编号），保持⽔平显示。也可以说内联列表就是为
+制作⽔平导航⽽⽣。 -->
+		<ul class="list-inline">
+			<li>首页</li>
+			<li>java学院</li>
+			<li>在线课堂</li>
+		</ul>
+
+		<!-- 0.1.5.3. 定义列表
+在原有的基础加⼊了⼀些样式使⽤样式 class="dl-horizontal" 制作⽔平定义列表 : 当标题宽度超过160px时将会显
+示三个省略号。 -->
+		<dl>
+			<dt>HTML</dt>
+			<dd>超文本标记语言</dd>
+			<dt>CSS</dt>
+			<dd>层叠样式表是一种样式表语言</dd>
+		</dl>
+
+<!-- 变为水平了 -->
+		<dl class="dl-horizontal">
+		    <dt>HTML 超文本标记语言</dt>
+		    <dd>HTML称为超文本标记语言，是一种标识性的语言。</dd>		   
+		    <dt>测试标题不能超过160px的宽度,否则2个点</dt>
+		    <dd>我在写一个水平定义列表的效果，我在写一个水平定义列表的效果。</dd>
+		</dl>
+	</body>
+</html>

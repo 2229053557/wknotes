@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+		<script src="js/jQuery3.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap-3.4.1/dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 表单主要功能是⽤来与⽤户做交流的⼀个⽹⻚控件，良好的表单设计能够让⽹⻚与⽤户更好的沟通。表单中常⻅的元素
+主要包括：⽂本输⼊框、下拉选择框、单选按钮、复选按钮、⽂本域和按钮等。
+.form-control ：表单元素样式适合文本框，下拉框，文本域； 
+-->
+			<div class="row">
+				<div class="col-md-3">
+					<!-- 1. 表单控件
+.form-control .input-lg（较⼤） .input-sm（较⼩） -->
+<!-- input输入框标签，form-control表单样式 -->
+					<input type="text" name="" class="form-control">
+					<input type="text" name="" class="form-control input-lg">
+					<input type="text" name="" class="form-control input-sm">
+				</div>
+				<div class="col-sm-3">
+				
+				    <select class="form-control">
+				        <option>北京</option>
+				        <option>上海</option>
+				        <option>深圳</option>
+				    </select>
+					<!-- 选择框select标签，form-control样式 -->
+						<!-- 多⾏选择设置：multiple="multiple" -->
+				    <select class="form-control" multiple="multiple">
+				        <option>北京</option>
+				        <option>上海</option>
+				        <option>深圳</option>
+				    </select>
+				</div>
+				<div class="col-sm-3"><!-- 文本域
+					textarea标签，form-control输入框样式-->
+				    <textarea class="form-control" rows="3"></textarea>
+				</div>
+
+				<!-- 复选框checkbox样式：垂直显示，input标签 -->
+				<div>		
+				    <div class="checkbox">
+				        <label><input type="checkbox" >游戏</label>
+				    </div>
+				    <div class="checkbox">
+				        <label><input type="checkbox" >学习</label>
+				    </div>
+				</div>
+			</div>
+
+			<!-- ⽔平显示： .checkbox-inline -->
+			<div>
+			    <label class="checkbox-inline">
+			        <input type="checkbox" >游戏
+			    </label>
+			    <label class="checkbox-inline">
+			        <input type="checkbox" >学习
+			    </label>
+			</div>
+		</div>
+
+		<!-- 复选框radio样式：垂直显示，input标签 -->
+		<div>
+		    <div class="radio">
+		        <label><input type="radio" >男</label>
+		    </div>
+		    <div class="radio">
+		        <label><input type="radio" >女</label>
+		    </div>
+		</div>
+
+
+		<!-- 水平显示:radio-inline -->
+		<div>
+		    <label class="radio-inline">
+		        <input type="radio" >男
+		    </label>
+		    <label class="radio-inline">
+		        <input type="radio" >女
+		    </label>
+		</div>
+
+		<!-- 使⽤ button 实现
+			可以用div,a,botton，span标签
+           基础样式： btn
+		附加样式：btn-primary btn-info btn-success btn-warning btn-danger btn-link btn-default
+		-->
+		<button class="btn btn-danger">按钮</button>
+		<button class="btn btn-primary">按钮</button>
+		<button class="btn btn-info">按钮</button>
+		<button class="btn btn-success">按钮</button>
+		<button class="btn btn-default">按钮</button>
+		<button class="btn btn-warning">按钮</button>
+		<button class="btn btn-link">按钮</button>
+		<hr>
+		<a href="##" class="btn btn-info">a标签按钮</a>
+		<span class="btn btn-success">span标签按钮</span>
+		<div class="btn btn-warning">div标签按钮</div>
+
+
+
+		<!-- 按钮大小 -->
+		<!-- 按钮⼤⼩
+使⽤ .btn-lg、.btn-sm 或 .btn-xs 就可以获得不同尺⼨的按钮 -->
+		<button class="btn btn-primary btn-xs">超小按钮.btn-xs</button>
+		<button class="btn btn-primary btn-sm">小型按钮.btn-sm</button>
+		<button class="btn btn-primary">正常按钮</button>
+		<button class="btn btn-primary btn-lg">大型按钮.btn-lg</button>
+		<hr>
+		<!-- 按钮禁⽤ -->
+		<!-- ⽅法1：在标签中添加disabled属性 -->
+		<button class="btn btn-danger" disabled="disabled">禁用按钮</button>
+		<!-- ⽅法2：在元素标签中添加类名"disabled" -->
+		<button class="btn btn-danger disabled">禁用按钮</button>
+		<!-- 注意：在class属性中添加disabled只是样式上禁⽤了，并不是真正的禁⽤了此按钮！ -->
+		<hr>
+<!-- 
+	表单布局
+		水平表单设置样式：form-horizontal
+ -->
+		<form class="form-horizontal" role="form">
+			<!-- 表单中的表单元素组样式：form-group-->
+			<div class="form-group">
+				<!-- 标签样式control-label -->	<!--样式大小col-sm-2  -->
+				<!-- for=“email指向input type” -->
+				<label for="email" class="control-label col-sm-2">邮箱</label>
+				<div class="col-sm-10"><!--样式大小col-sm-2数字为具体大小  -->
+					<input type="email" class="form-control" placeholder="请输入邮箱"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="pwd" class="control-label col-sm-2">密码</label>
+				<div class="col-sm-10">
+					<input type="pwd" class="form-control" placeholder="请输入密码" />
+				</div>
+			</div>
+			<!-- 表单中的表单元素组样式：form-group-->
+			<div class="form-group">
+				<!-- col-sm-offset-2，col-sm小字体，offset-2向右偏移2个格子 -->
+				<div class="col-sm-offset-2">
+					<div class=" checkbox">
+						<label>
+							<input type="checkbox" />记住密码
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button class="btn btn-default">提交</button>
+				</div>
+			</div>
+		</form>
+		<hr>
+		<!-- 水平排列 -->
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="email" >邮箱</label>
+				<input type="email" class="form-control" placeholder="请输入邮箱"/>
+			</div>
+			<div class="form-group">
+				<label for="pwd" >密码</label>
+					<input type="pwd" class="form-control" placeholder="请输入密码" />
+			</div>
+			<div class="form-group checkbox">
+				<label><input type="checkbox" />记住密码</label>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-default">提交</button>
+			</div>
+		</form>
+	</body>
+</html>

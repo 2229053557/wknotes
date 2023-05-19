@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+		<script src="js/jQuery3.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+       
+  <!-- 在本章中，我们将学习 Bootstrap 对图片的支持。Bootstrap 提供了三个可对图片应用简单样式的 class：
+
+.img-rounded：添加 border-radius:6px 来获得图片圆角。
+.img-circle：添加 border-radius:50% 来让整个图片变成圆形。
+.img-thumbnail：添加一些内边距（padding）和一个灰色的边框。 -->
+<img src="img/gyy.jpg" class="img-rounded">
+<img src="img/gyy.jpg" class="img-circle">
+<img src="img/gyy.jpg" class="img-thumbnail">
+  
+<!-- 响应式图片
+通过在 <img> 标签添加 .img-responsive 类来让图片支持响应式设计。 图片将很好地扩展到父元素。
+
+.img-responsive 类将 max-width: 100%; 和 height: auto; 样式应用在图片上： -->
+<div class="container">
+	<h2>图片</h2>
+	<p> .img-responsive类让图片支持响应式，将很好地扩展到父元素 (通过改变窗口大小查看效果):</p>                  
+	<img src="img/gyy.jpg" class="img-responsive" alt="Cinque Terre" width="304" height="236"> 
+</div>
+	</body>
+</html>

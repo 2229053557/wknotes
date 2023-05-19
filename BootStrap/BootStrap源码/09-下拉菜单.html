@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+		<script src="js/jQuery3.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--使用一个类名为dropdown,默认向下dropdown，向上弹起加入 . dropup 即可-->
+		<div class="dropdown ">
+		    <!--使用button作为父菜单，使用类名: dropdown-toggle 和自定义data-toggle属性-->
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		        喜欢频道 <span class="caret"></span><!--下拉箭头-->
+		    </button>
+		    <!--下拉菜单项使用一个ul列表，并且定义一个类名为“dropdown-menu-->
+		    <ul class="dropdown-menu">	 <!--dropdown-menu-right右对齐-->
+		        <!--分组标题: li 添加类名 “dropdown-header” 来实现分组的功能-->
+		        <li class="dropdown-header">----科普----</li>
+		        <li>
+		            <a href="#">人与自然</a>
+		        </li>
+		        <!--分组分割线: <li>添加类名“divider”来实现添加下拉分隔线的功能-->
+		        <li class="divider"></li>
+		        <li class="dropdown-header">----搞笑----</li>
+		        <li>
+		            <a href="#">欢乐喜剧人</a>
+		        </li>
+		        <li>
+		            <a href="#">快乐大本营</a>
+		        </li>
+		        <li class="divider"></li>
+		        <li class="disabled">	<!--禁用状态-->
+		            <a href="#">生活大爆炸</a>
+		        </li>
+		    </ul>
+		</div>
+		<hr>
+		<!-- 第一步 -->
+		<div class="dropdown">
+			<!-- 第二步 -->
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				你喜欢的频道<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">	 <!--dropdown-menu-right右对齐-->
+			    <!--分组标题: li 添加类名 “dropdown-header” 来实现分组的功能-->
+			    <li class="dropdown-header">----科普----</li>
+			    <li>
+			        <a href="#">人与自然</a>
+			    </li>
+			    <!--分组分割线: <li>添加类名“divider”来实现添加下拉分隔线的功能-->
+			    <li class="divider"></li>
+			    <li class="dropdown-header">----搞笑----</li>
+			    <li>
+			        <a href="#">欢乐喜剧人</a>
+			    </li>
+			    <li>
+			        <a href="#">快乐大本营</a>
+			    </li>
+			    <li class="divider"></li>
+			    <li class="disabled">	<!--禁用状态-->
+			        <a href="#">生活大爆炸</a>
+			    </li>
+			</ul>
+		</div>
+
+
+		
+	</body>
+</html>

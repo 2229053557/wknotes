@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="/BootStrap/bootstrap/dist/css/bootstrap.css"/>
+		
+	</head>
+	<body>
+		<!-- 列组合 -->	<!-- 只要列总数不超过12个就不会换行 -->
+		<div class="container">
+			<div class="row">	
+				<div  style="background-color: rgb(72, 201, 164);"> 4</div>
+				<div  style="background-color: rgb(32, 35, 191);">4</div>		
+			</div>
+			<hr>
+			<!-- 列组合 -->
+			<div class="row">
+				<!-- column md-4 -->
+				<div class="col-sm-4 col-md-4 col-lg-4" style="background-color: red;"> AAAAA</div>
+				<div class="col-sm-8 col-md-8 col-lg-8" style="background-color: gray;"> BBBB</div>
+			
+			</div>
+			<hr/>
+			<div class="row">
+				<!-- column md-4 -->
+				<div class="col-sm-6 col-md-6 col-lg-6" style="background-color: rgb(35, 200, 41);">
+					左
+				</div>
+				<div class="col-md-6" style="background-color: rgb(229, 227, 227);">
+					右
+				</div>
+			</div>
+			<div class="row">
+				<!-- column md-4 -->
+				<div class="col-md-4" style="background-color: red;">
+					左
+				</div>
+				<div class="col-md-4" style="background-color: rgb(24, 64, 223);">
+					中
+				</div>
+				<!-- column md-4 -->
+				<div class="col-md-4" style="background-color: rgb(156, 24, 239);">
+					右
+				</div>
+			</div>
+			<hr>
+			<!-- 列组合 -->
+			<div class="row">
+				<!-- column md-4 -->
+				<div class="col-md-1" style="background-color: red;"> 1</div>
+				<div class="col-md-1" style="background-color: gray;"> 1</div>
+				<div class="col-md-1" style="background-color: red;"> 1</div>
+				<div class="col-md-1" style="background-color: gray;"> 1</div>
+				<div class="col-md-1" style="background-color: red;"> 1</div>
+				<div class="col-md-1" style="background-color: gray;"> 1</div>
+			
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<!-- 2.列偏移 -----
+		只需要在列元素上添加类名"col-mdoffset-*"(其中星号代表要偏移的列组合数)，那么具有这个类名的列就会向右偏移多少个格子、
+		就是与前面的距离
+	    -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1" style="background-color: red;">一列</div>
+				<div class="col-md-1" style="background-color: burlywood;">二列</div>
+				<div class="col-md-1 col-md-offset-8" style="background-color: green;">三列</div>
+				<div class="col-md-1" style="background-color: rgb(89, 41, 244);">12列</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- 3.列排序 -->
+		<!-- 列排序其实就是改变列的⽅向，就是改变左右浮动，并且设置浮动的距离。在Bootstrap框架的⽹格
+系统中是通过添加类名 col-md-push-* 和 col-md-pull-* (其中星号代表移动的列组合数)。往前pull，
+往后push。 -->
+		<div class="container">
+		    <div class="row">
+				<!-- push,pull -->
+				<div class="col-md-1 col-md-push-10" style="background-color: pink;">1列</div>
+				<!-- col-md-push是向右浮动10个格子 -->
+				<div class="col-md-1 col-md-pull-1" style="background-color: orange;">2列</div>	
+				<!-- col-md-pull是向左移动1个格子 -->
+			</div>
+		</div>
+
+
+
+
+
+		<!-- 列嵌套 -->
+		<!-- Bootstrap框架的⽹格系统还⽀持列的嵌套。你可以在⼀个列中添加⼀个或者多个⾏（row）容器，
+然后在这个⾏容器中插⼊列. -->
+		<div class="container">
+		    <div class="row">
+				<!--  -->
+		        <div class="col-md-2"  style="background-color:rgb(19, 231, 58);">
+		            我的里面嵌套了一个网格
+		            <div class="row">
+		                <div class="col-md-9 " style="background-color:red;">9</div>
+		                <div class="col-md-3" style="background-color:rgb(27, 27, 240);">3</div>
+		            </div>
+		        </div>
+		        <div class="col-md-10" style="background-color:rgb(227, 210, 22);">10格我的里面嵌套了一个网格
+		            <div class="row">
+		                <div class="col-md-10" style="background-color:rgb(36, 14, 175);">10</div>
+		                <div class="col-md-2" style="background-color:rgb(197, 24, 220);">2</div>
+		            </div>
+		        </div>				
+		    </div>
+
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3  col-sm-6" style="background-color: red;">3</div>
+				<div class="col-md-3   col-sm-6" style="background-color: burlywood;">3</div>
+				<div class="col-md-3  col-sm-6" style="background-color: green;">3</div>
+				<div class="col-md-3  col-sm-6" style="background-color: rgb(89, 41, 244);">3</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>布局容器</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"/>
+		<script src="js/jQuery3.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="bootstrap/dist/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+       
+  <!-- 事件
+    导航工具条（Navbar）
+下表列出了滚动监听中要用到事件。这些事件可在函数中当钩子使用。
+activate.bs.scrollspy	每当一个新项目被滚动监听激活时，触发该事件。	
+$('#myScrollspy').on('activate.bs.scrollspy', function () {
+  // 执行一些动作...
+})
+-->
+ <!--bootstrap中navbar-static是一个类，用于将导航栏固定在页面顶部 -->
+<nav id="myScrollspy" class="navbar navbar-default navbar-static" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container-fluid"> 
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+            <span class="sr-only">切换导航</span>
+            <!-- sr-only用于在屏幕阅读器上隐藏元素 -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <!-- icon-bar用于表示汉堡菜单栏中的三条横线 -->
+            <span class="icon-bar"></span>
+        </button>
+        <!-- titlle名称navbar-brand -->
+        <a class="navbar-brand" href="#">教程名称</a>
+    </div>
+<!--  -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+        <!-- bs-js-navbar-scrollspy是bootstrap中的一个滚动监听插件，会根据滚动条的位置自动更新对应的导航目标-->
+        <ul class="nav navbar-nav">
+            <!-- navbar-nav是一个css类，用于定义导航栏的链接列表。它是一个ui元素，其中包括
+            ，其中包括一个或多个li元素，每个li元素都包含一个链接。
+            -->
+            <li ><a href="#ios">iOS</a></li>
+            <li><a href="#svn">SVN</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="navbarDrop1">java <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu">
+                <li><a href="#jmeter" tabindex="-1">jmeter</a></li>
+                <li><a href="#ejb" tabindex="-1">ejb</a></li>
+                <li class="divider"></li>
+                <li><a href="#spring" tabindex="-1">spring</a></li>
+                </ul> 
+            </li>
+        </ul>
+    </div>
+    </div><!-- /.navbar-collapse -->
+</nav>
+<div data-spy="scroll" data-target="#myScrollspy" data-offset="0"
+     style="height:200px;overflow:auto; position: relative;">
+    <div class="section">
+        <h4 id="ios">iOS<small><a href="#" onclick="removeSection(this);">
+                    &times; 删除该部分</a></small>
+        </h4>
+        <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+            TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+    </div>
+    <div class="section">
+        <h4 id="svn">SVN<small></small></h4>
+        <p>Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由 CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation 的一个项目，因此拥有丰富的开发人员和用户社区。</p>
+    </div>
+    <div class="section">
+        <h4 id="jmeter">jMeter<small><a href="#" onclick="removeSection(this);">
+                    &times; 删除该部分</a></small>
+        </h4>
+        <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+    </div>
+    <div class="section">
+        <h4 id="ejb">EJB</h4>
+        <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。</p>
+    </div>
+    <div class="section">
+        <h4 id="spring">Spring</h4>
+        <p>Spring 框架是一个开源的 Java 平台，为快速开发功能强大的 Java 应用程序提供了完备的基础设施支持。</p>
+        <p>Spring 框架最初是由 Rod Johnson 编写的，在 2003 年 6 月首次发布于 Apache 2.0 许可证下。</p>
+    </div>
+</div>
+<span id="activeitem" style="color:red;"></span>
+<script>
+    // $(function(){
+        // removeSection = function(e) {
+        //     $(e).parents(".section").remove();
+        //     $('[data-spy="scroll"]').each(function () {
+        //         var $spy = $(this).scrollspy('refresh')
+        //     });
+        // }
+        // $("#myScrollspy").scrollspy();
+    //     $('#myScrollspy').on('activate.bs.scrollspy', function () {
+    //         var currentItem = $(".nav li.active > a").text();
+    //         $("#activeitem").html("目前您正在查看 - " + currentItem);
+    //     })
+    // });
+    $(function(){
+        removeSection = function(e) {
+            $(e).parents(".section").remove();
+            $('[data-spy="scroll"]').each(function () {
+                var $spy = $(this).scrollspy('refresh')
+            });
+        }
+        $("#myScrollspy").scrollspy();
+        $("#myScrollspy").on('activate.bs.scrollspy',function(){
+            var $currentItem=$(".nav li.active>a").text();
+            $("#activeitem").html("目前你正在查看-"+$currentItem);
+        })
+    })
+</script>
+
+  
+       
+       
+	</body>
+</html>
